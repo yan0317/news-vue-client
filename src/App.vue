@@ -1,16 +1,20 @@
 <template>
     <div class="app">
         <Navs></Navs>
-        <div class="test"></div>
+        <News></News>
     </div>
 </template>
 
+
 <script>
+
 import Navs from './views/navigation/Navs'
+import News from './views/news/News'
 export default {
     name: 'App',
     components: {
-        Navs
+        Navs,
+        News
     },
     data() {
         return {
@@ -28,12 +32,6 @@ export default {
     display: flex;
     flex-direction: column;
     width: 100%;
-}
-
-.test {
-    margin-top: 110px;
-    width: 100%;
-    height: 5000px;
-    background-color: red;
+    background-color: #F6F8FC;
 }
 </style>

@@ -17,6 +17,7 @@ new Vue({
   router,
   store,
   beforeCreate() {
-    Vue.prototype.axios = axios
+    Vue.prototype.$bus = this,//安装全局事件总线
+      Vue.prototype.axios = axios
   }
 }).$mount('#app')
