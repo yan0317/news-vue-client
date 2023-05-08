@@ -25,6 +25,7 @@
                     <div v-if="issearching" class="searchingfixed">
                         <!-- 绝对定位 -->
                         <div class="searchingabso" :style="{ width: `${boxWidth}px` }">
+
                             <div class="classify" @click="putcolor">
                                 <div class="classtitle" @click="putcolor">
                                     <span>分类</span>
@@ -43,12 +44,13 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="keyword" @click="putcolor">
                                 <div class="keytitle" @click="putcolor">
                                     <span>关键词</span>
                                 </div>
                                 <div class="inputkey" @click="putcolor">
-                                    <input type="text" @focus="putcolor" @blur="removecolor" />
+                                    <input type="text" @focus="putcolor" @blur="removecolor" placeholder="请输入关键词" />
                                 </div>
 
                             </div>
@@ -60,99 +62,91 @@
                                 <div class="pulldown">
 
                                     <div class="sb">
-                                        <span>年</span>
+                                        <span>年:</span>
                                         <select>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
+                                            <option value="option1">1999</option>
+                                            <option value="option2">2000</option>
+                                            <option value="option3">2001</option>
+                                            <option value="option1">2002</option>
+                                            <option value="option2">2003</option>
+                                            <option value="option3">2004</option>
+                                            <option value="option1">2005</option>
+                                            <option value="option2">2006</option>
+                                            <option value="option3">2007</option>
+                                            <option value="option1">2008</option>
+                                            <option value="option2">2009</option>
+                                            <option value="option3">2010</option>
+                                            <option value="option1">2011</option>
+                                            <option value="option2">2012</option>
+                                            <option value="option3">2013</option>
+                                            <option value="option1">2014</option>
+                                            <option value="option2">2015</option>
+                                            <option value="option3">2016</option>
+                                            <option value="option1">2017</option>
+                                            <option value="option2">2018</option>
+                                            <option value="option3">2019</option>
+                                            <option value="option1">2020</option>
+                                            <option value="option2">2021</option>
+                                            <option value="option3">2022</option>
+                                            <option value="option1">2023</option>
                                         </select>
-                                        <span>月</span>
+                                        <span>月:</span>
                                         <select>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
+                                            <option value="option1">1</option>
+                                            <option value="option2">2</option>
+                                            <option value="option3">3</option>
+                                            <option value="option1">4</option>
+                                            <option value="option2">5</option>
+                                            <option value="option3">6</option>
+                                            <option value="option1">7</option>
+                                            <option value="option2">8</option>
+                                            <option value="option3">9</option>
+                                            <option value="option1">10</option>
+                                            <option value="option2">11</option>
+                                            <option value="option2">12</option>
                                         </select>
-                                        <span>日</span>
+                                        <span>日:</span>
                                         <select>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
-                                            <option value="option1">选项1</option>
-                                            <option value="option2">选项2</option>
-                                            <option value="option3">选项3</option>
+                                            <option value="option1">1</option>
+                                            <option value="option2">2</option>
+                                            <option value="option3">3</option>
+                                            <option value="option1">4</option>
+                                            <option value="option2">5</option>
+                                            <option value="option3">6</option>
+                                            <option value="option1">7</option>
+                                            <option value="option2">8</option>
+                                            <option value="option3">9</option>
+                                            <option value="option1">10</option>
+                                            <option value="option2">11</option>
+                                            <option value="option2">12</option>
+                                            <option value="option3">13</option>
+                                            <option value="option1">14</option>
+                                            <option value="option2">15</option>
+                                            <option value="option3">16</option>
+                                            <option value="option1">17</option>
+                                            <option value="option2">18</option>
+                                            <option value="option3">19</option>
+                                            <option value="option1">20</option>
+                                            <option value="option2">21</option>
+                                            <option value="option3">22</option>
+                                            <option value="option1">23</option>
+                                            <option value="option2">24</option>
+                                            <option value="option3">25</option>
+                                            <option value="option1">26</option>
+                                            <option value="option2">27</option>
+                                            <option value="option3">28</option>
+                                            <option value="option3">29</option>
+                                            <option value="option1">30</option>
+                                            <option value="option2">31</option>
                                         </select>
                                     </div>
 
                                 </div>
+                            </div>
+
+                            <div class="sezrchend" @click="putcolor">
+                                <button>查询</button>
+                                <button>重置</button>
                             </div>
                         </div>
                     </div>
@@ -250,18 +244,11 @@ export default {
                 this.serimg = triangledown
                 this.issearching = true
             }
-
         },
         searchingabsoremo() {
             this.inputBgColor = '#F1F3F4';
             this.serimg = triangleup
             this.issearching = false;
-
-        },
-        // 定义一个计算属性来实时获取盒子的宽度
-        boxWidthComputed() {
-            const parentClientWidth = this.$refs.box.clientWidth;
-            return parentClientWidth
         },
         loguser() {
             var _this = this;
@@ -300,16 +287,19 @@ export default {
             }, error => {
                 alert("网络开小差了!")
             })
+        },
+        updateBoxWidth() {
+            if (this.$refs.box) {
+                this.boxWidth = this.$refs.box.clientWidth;
+            }
         }
-
     },
     mounted() {
-        // 监听窗口大小变化，实时更新盒子的宽度
-        window.addEventListener('resize', () => {
-            this.boxWidth = this.$refs.box.clientWidth;
-        });
-        // 初始化时获取一次盒子的宽度
-        this.boxWidth = this.$refs.box.clientWidth;
+        window.addEventListener('resize', this.updateBoxWidth);
+        this.$nextTick(this.updateBoxWidth);
+    },
+    beforeDestroy() {
+        window.removeEventListener('resize', this.updateBoxWidth);
     },
 }
 </script>
@@ -665,51 +655,65 @@ export default {
     opacity: 0.7;
 }
 
-.classify {
+.searchingfixed .searchingabso .classify {
     display: flex;
     width: calc(100%-20px);
     height: 130px;
     padding: 10px;
 }
 
-.classtitle {
+.searchingfixed .searchingabso .classify .classtitle {
     display: flex;
     flex-grow: 0.2;
     height: 130px;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 16px;
 }
 
-.classifybox {
+.searchingfixed .searchingabso .classify .classifybox {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-grow: 0.8;
     height: 110px;
     padding: 10px 0px 10px 0px;
-    box-shadow: 0px 4px 4px 0px #E0E0E1;
     border: 1px solid #E0E0E1;
     border-radius: 10px;
 }
 
-.classifyone {
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-}
 
-.classifytwo {
+
+.searchingfixed .searchingabso .classify .classifybox .classifyone {
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    flex-grow: 1;
+    height: 55px;
+}
 
+.searchingfixed .searchingabso .classify .classifybox .classifyone button {
+    font-size: 15px;
+    border: none;
+    background-color: #fff;
+}
+
+.searchingfixed .searchingabso .classify .classifybox .classifytwo {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height: 55px;
+}
+
+.searchingfixed .searchingabso .classify .classifybox .classifytwo button {
+    font-size: 15px;
+    border: none;
+    background-color: #fff;
 }
 
 .keyword {
     display: flex;
     width: calc(100%-20px);
-    height: 100px;
+    height: 60px;
     padding: 10px;
 }
 
@@ -718,22 +722,22 @@ export default {
     justify-content: center;
     align-items: center;
     flex-grow: 0.2;
-    height: 100px;
-    font-size: 20px;
+    height: 80px;
+    font-size: 16px;
 }
 
 .inputkey {
     display: flex;
     align-items: center;
-    height: 80px;
-    flex-grow: 1;
+    height: 60px;
+    flex-grow: 0.8;
     padding: 10px 0px 10px 0px;
 }
 
 .searchingfixed .searchingabso .keyword .inputkey input {
     display: inline-block;
     flex-grow: 1;
-    height: 50px;
+    height: 30px;
     border: none;
     background-color: #fff;
     border-bottom: 5px solid #E0E0E0;
@@ -744,13 +748,10 @@ export default {
 }
 
 
-
-
-/*  */
 .searchingfixed .searchingabso .eventdate {
     display: flex;
     width: calc(100%-20px);
-    height: 100px;
+    height: 70px;
     padding: 10px;
 }
 
@@ -759,50 +760,62 @@ export default {
     justify-content: center;
     align-items: center;
     flex-grow: 0.2;
-    height: 100px;
-    font-size: 20px;
+    height: 70px;
+    font-size: 16px;
 }
 
-.searchingfixed .searchingabso .eventdate .timetitle .pulldown {
+.searchingfixed .searchingabso .eventdate .pulldown {
     display: flex;
     align-items: center;
-    height: 80px;
+    height: 50px;
     flex-grow: 0.8;
     padding: 10px 0px 10px 0px;
 }
 
-.searchingfixed .searchingabso .eventdate .timetitle .pulldown .sb {
+.searchingfixed .searchingabso .eventdate .pulldown .sb {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-grow: 1;
-    background-color: #1A73E8;
     height: 50px;
 }
 
-/*  
-*/
-/* .eventdate {
-    display: flex;
-    width: calc(100%-20px);
-    height: 110px;
-    padding: 10px;
+.searchingfixed .searchingabso .eventdate .pulldown .sb span {
+    margin-right: 2%;
 }
 
-.timetitle {
+.eventdate .pulldown .sb select {
+    display: inline-block;
+    width: 20%;
+    height: 30px;
+    margin-right: 15%;
+}
+
+.searchingfixed .searchingabso .sezrchend {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
-    flex-grow: 0.2;
-    height: 110px;
-    font-size: 20%;
+    width: 100%;
+    height: 80px;
 }
 
-.pulldown {
-    display: flex;
-    
-    justify-content: space-between;
-} */
+.searchingfixed .searchingabso .sezrchend button {
+    width: 70px;
+    height: 40px;
+    border: none;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid gray;
+}
+
+.searchingfixed .searchingabso .sezrchend button:nth-child(1) {
+    margin-right: 3%;
+    box-shadow: 0px 4px 4px 0px #E0E0E1;
+}
+
+.searchingfixed .searchingabso .sezrchend button:nth-child(2) {
+    margin-right: 3%;
+    box-shadow: 0px 4px 4px 0px #E0E0E1;
+}
 </style>
  
