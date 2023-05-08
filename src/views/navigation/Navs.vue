@@ -10,13 +10,159 @@
                 <span class="newstitle">新闻</span>
             </div>
 
-            <div class="search">
-                <input type="text">
+            <div class="search" ref="box">
+                <div class="searchimg">
+                    <span class="searchimgs">
+                        <a href="#" @focus="putcolor" @blur="removecolor"><img src="./images/search.png" alt="" /></a>
+                    </span>
+                </div>
+                <input type="text" @focus="putcolor" @blur="removecolor" :style="{ backgroundColor: inputBgColor }">
+                <div class="searchingimg">
+                    <a href="#" @click="cliserimg" @focus="putcolor" @blur="removecolor">
+                        <img v-bind:src="serimg" alt="" />
+                    </a>
+                    <!-- 固定定位 -->
+                    <div v-if="issearching" class="searchingfixed">
+                        <!-- 绝对定位 -->
+                        <div class="searchingabso" :style="{ width: `${boxWidth}px` }">
+                            <div class="classify" @click="putcolor">
+                                <div class="classtitle" @click="putcolor">
+                                    <span>分类</span>
+                                </div>
+
+                                <div class="classifybox" @click="putcolor">
+                                    <div class="classifyone" @click="putcolor">
+                                        <button>推荐</button>
+                                        <button>科技</button>
+                                        <button>健康</button>
+                                    </div>
+                                    <div class="classifytwo" @click="putcolor">
+                                        <button>商业</button>
+                                        <button>娱乐</button>
+                                        <button>体育</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="keyword" @click="putcolor">
+                                <div class="keytitle" @click="putcolor">
+                                    <span>关键词</span>
+                                </div>
+                                <div class="inputkey" @click="putcolor">
+                                    <input type="text" @focus="putcolor" @blur="removecolor" />
+                                </div>
+
+                            </div>
+
+                            <div class="eventdate" @click="putcolor">
+                                <div class="timetitle">
+                                    <span>时间</span>
+                                </div>
+                                <div class="pulldown">
+
+                                    <div class="sb">
+                                        <span>年</span>
+                                        <select>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                        </select>
+                                        <span>月</span>
+                                        <select>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                        </select>
+                                        <span>日</span>
+                                        <select>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                            <option value="option1">选项1</option>
+                                            <option value="option2">选项2</option>
+                                            <option value="option3">选项3</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
 
             <div class="users">
                 <div>
-                    <button @click="showLoginDialog">登录</button>
+                    <button class="logtitle" @click="showLoginDialog">登录</button>
                     <div v-if="isLoginDialogVisible" class="login-dialog">
                         <div class="login-dialog-container">
 
@@ -62,17 +208,30 @@
 
 <script>
 import axios from 'axios';
+import triangleup from './images/triangleup.png'
+import triangledown from './images/triangledown.png'
 export default {
     name: 'Navs',
     data() {
         return {
+            counts: 0,
+            boxWidth: 0,
+            inputBgColor: '#F1F3F4',
+            serimg: triangleup,
             isLoginDialogVisible: false,
+            issearching: false,
             username: '',
             password: '',
             baseURL: 'http://localhost:8181/users'
         }
     },
     methods: {
+        putcolor() {
+            this.inputBgColor = '#FFFFFF';
+        },
+        removecolor() {
+            this.inputBgColor = '#F1F3F4';
+        },
         sendURL(type) {
             this.$bus.$emit('sendURLS', type);
         },
@@ -81,6 +240,28 @@ export default {
         },
         cancel() {
             this.isLoginDialogVisible = false
+        },
+        cliserimg() {
+            this.counts = this.counts + 1;
+            if (this.counts % 2 == 0) {
+                this.serimg = triangleup
+                this.issearching = false;
+            } else {
+                this.serimg = triangledown
+                this.issearching = true
+            }
+
+        },
+        searchingabsoremo() {
+            this.inputBgColor = '#F1F3F4';
+            this.serimg = triangleup
+            this.issearching = false;
+
+        },
+        // 定义一个计算属性来实时获取盒子的宽度
+        boxWidthComputed() {
+            const parentClientWidth = this.$refs.box.clientWidth;
+            return parentClientWidth
         },
         loguser() {
             var _this = this;
@@ -120,7 +301,16 @@ export default {
                 alert("网络开小差了!")
             })
         }
-    }
+
+    },
+    mounted() {
+        // 监听窗口大小变化，实时更新盒子的宽度
+        window.addEventListener('resize', () => {
+            this.boxWidth = this.$refs.box.clientWidth;
+        });
+        // 初始化时获取一次盒子的宽度
+        this.boxWidth = this.$refs.box.clientWidth;
+    },
 }
 </script>
 
@@ -171,8 +361,35 @@ export default {
     align-items: center;
     width: 0;
     flex-grow: 1;
+    border-radius: 10px;
     /* margin-left: 235px; */
+    background-color: #F1F3F4;
     margin-left: calc(max(10px, (100% - 700px - 150px - 235px) / 2));
+}
+
+.head .upnav .search .searchimg {
+    height: 35px;
+    width: 35px;
+    padding: 5px;
+}
+
+.head .upnav .search .searchimg .searchimgs {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head .upnav .search .searchimg .searchimgs img {
+    height: 20px;
+}
+
+.head .upnav .search .searchimg .searchimgs:hover {
+    background-color: #E3E5E6;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
 }
 
 .head .upnav .search input {
@@ -180,14 +397,60 @@ export default {
     flex-grow: 1;
     height: 45px;
     border: none;
-    background-color: #F1F3F4;
-    border-radius: 8px;
     font-size: 15px;
+    background-color: #F1F3F4;
 }
 
 .head .upnav .search input:focus {
     outline: none;
-    border: 1px solid grey;
+}
+
+.head .upnav .search:focus-within {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E0E0E1;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px #E0E0E1;
+}
+
+.head .upnav .search .searchingimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    width: 45px;
+    height: 45px;
+}
+
+.head .upnav .search .searchingimg a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+.head .upnav .search .searchingimg img {
+    height: 32px;
+}
+
+.searchingfixed {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.searchingabso {
+    position: absolute;
+    top: 0;
+    left: calc(max(150px, (100% - 700px - 100px) / 2));
+    height: 400px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #D0D2D5;
+    box-shadow: 0px 4px 4px 0px #E0E0E1;
+    animation: searchingfixed 0.2s ease-out both;
 }
 
 .head .upnav .users {
@@ -201,6 +464,12 @@ export default {
 
 .head .upnav .users .login {
     font-size: 15px;
+}
+
+.users .logtitle {
+    display: inline-block;
+    border: none;
+    background-color: #fff;
 }
 
 .downnav {
@@ -279,6 +548,15 @@ export default {
     }
 }
 
+@keyframes searchingfixed {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
 
 
 /* 登录 */
@@ -299,20 +577,21 @@ export default {
 }
 
 .headimg {
-    height: 20px;
+    height: 30px;
 }
 
 .headimg img {
     display: inline-block;
     float: right;
     height: 20px;
-    margin-right: 10px;
+    margin-right: 15px;
+    margin-top: 10px;
 }
 
 .te {
-    height: 80px;
+    height: 70px;
     text-align: center;
-    line-height: 80px;
+    line-height: 45px;
 }
 
 .in {
@@ -385,5 +664,145 @@ export default {
     background-color: #f5f5f5;
     opacity: 0.7;
 }
+
+.classify {
+    display: flex;
+    width: calc(100%-20px);
+    height: 130px;
+    padding: 10px;
+}
+
+.classtitle {
+    display: flex;
+    flex-grow: 0.2;
+    height: 130px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.classifybox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 0.8;
+    height: 110px;
+    padding: 10px 0px 10px 0px;
+    box-shadow: 0px 4px 4px 0px #E0E0E1;
+    border: 1px solid #E0E0E1;
+    border-radius: 10px;
+}
+
+.classifyone {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.classifytwo {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+
+}
+
+.keyword {
+    display: flex;
+    width: calc(100%-20px);
+    height: 100px;
+    padding: 10px;
+}
+
+.keytitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0.2;
+    height: 100px;
+    font-size: 20px;
+}
+
+.inputkey {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    flex-grow: 1;
+    padding: 10px 0px 10px 0px;
+}
+
+.searchingfixed .searchingabso .keyword .inputkey input {
+    display: inline-block;
+    flex-grow: 1;
+    height: 50px;
+    border: none;
+    background-color: #fff;
+    border-bottom: 5px solid #E0E0E0;
+}
+
+.keyword .inputkey input:focus {
+    outline: none;
+}
+
+
+
+
+/*  */
+.searchingfixed .searchingabso .eventdate {
+    display: flex;
+    width: calc(100%-20px);
+    height: 100px;
+    padding: 10px;
+}
+
+.searchingfixed .searchingabso .eventdate .timetitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0.2;
+    height: 100px;
+    font-size: 20px;
+}
+
+.searchingfixed .searchingabso .eventdate .timetitle .pulldown {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    flex-grow: 0.8;
+    padding: 10px 0px 10px 0px;
+}
+
+.searchingfixed .searchingabso .eventdate .timetitle .pulldown .sb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    background-color: #1A73E8;
+    height: 50px;
+}
+
+/*  
+*/
+/* .eventdate {
+    display: flex;
+    width: calc(100%-20px);
+    height: 110px;
+    padding: 10px;
+}
+
+.timetitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0.2;
+    height: 110px;
+    font-size: 20%;
+}
+
+.pulldown {
+    display: flex;
+    
+    justify-content: space-between;
+} */
 </style>
  
